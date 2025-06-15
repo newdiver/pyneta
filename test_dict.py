@@ -13,6 +13,7 @@ cisco_881 = {
     'secret': 'secret',     # optional, defaults to ''
 }
 '''
+# build a dictionary to hold the device connection information
 device1 = {
     'host': 'nxos1.lasthop.io', 
     'username': 'pyclass', 
@@ -20,7 +21,21 @@ device1 = {
     'device_type': 'cisco_nxos',
    # 'session_log':'my_session.txt',
     }
-net_connection = ConnectHandler(**device1)
-print(net_connection.find_prompt())
+device2 = {  'host': 'nxos2.lasthop.io', 
+    'username': 'pyclass', 
+    'password': getpass(), 
+    'device_type': 'cisco_nxos',
+   # 'session_log':'my_session.txt',
+    
+}
+# loop through the devices to conmmunicate with them.
+for device in range(device1, device2):
+    net_connection = ConnectHandler(**device)
+    # print the router prompt back from this device to verify you are connecting to the device properly.
+    print(net_connection.find_prompt())
+    if device == device2:
+  # send_command() method to retrieve 'show version'  
+        output= netconnection.send_command('show version')    
+        print(output)
 
     
