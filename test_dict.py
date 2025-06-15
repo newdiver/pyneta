@@ -29,7 +29,7 @@ device2 = {  'host': 'nxos2.lasthop.io',
     
 }
 # loop through the devices to conmmunicate with them.
-for device in range(device1, device2):
+for device in [device1, device2]:
     net_connection = ConnectHandler(**device)
     # print the router prompt back from this device to verify you are connecting to the device properly.
     print(net_connection.find_prompt())
