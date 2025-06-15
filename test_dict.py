@@ -35,7 +35,7 @@ for device in [device1, device2]:
     print(net_connection.find_prompt())
     if device == device2:
   # send_command() method to retrieve 'show version'  
-        output= netconnection.send_command('show version')    
+        output= net_connection.send_command('show version')    
         print(output)
 
     
