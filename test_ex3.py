@@ -19,11 +19,11 @@ cisco_881 = {
 '''
 cisco3 = {
     'device_type': 'cisco_ios',
-    'hostname' : 'cisco3.lasthop.io',
-    'username': 'test',
-    'password': 'password',
-    'port' : 8022,          # optional, defaults to 22
-    'secret': 'secret',     # optional, defaults to ''
+    'host' : 'cisco3.lasthop.io',
+    'username': 'pyclass',
+    'password': getpass(),
+    'port' : 22,          # optional, defaults to 22
+    #'secret': 'secret',     # optional, defaults to ''
 }
 net_connection = ConnectHandler(**cisco3)
     # print the router prompt back from this device to verify you are connecting to the device properly.
