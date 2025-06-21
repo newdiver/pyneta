@@ -16,7 +16,6 @@ cisco_881 = {
 # build a dictionary to hold the device connection information
 cisco3 = {          #(Cisco IOS-XE)
     "host": 'cisco3.lasthop.io',
-    "snmp_port": 161,
     "ssh_port": 22,
     "username": 'pyclass',
     "password": getpass(),
