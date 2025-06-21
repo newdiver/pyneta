@@ -23,12 +23,12 @@ cisco3 = {          #(Cisco IOS-XE)
     "device_type": 'cisco_ios',
 }
 command = 'delete flash:/sample.txt'
-    net_connection = ConnectHandler(**cisco3)
+net_connection = ConnectHandler(**cisco3)
     
-    # print the router prompt back from this device to verify you are connecting to the device properly.
-    print(net_connection.find_prompt())
-    net_connection.send_command(command, expect_string=r'confirm') 
-    net_connection.send_command('y', expect_string=r'#')
+# print the router prompt back from this device to verify you are connecting to the device properly.
+print(net_connection.find_prompt())
+net_connection.send_command(command, expect_string=r'confirm') 
+net_connection.send_command('y', expect_string=r'#')
     
     
 
