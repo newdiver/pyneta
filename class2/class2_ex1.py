@@ -40,6 +40,8 @@ try:
                                       strip_prompt=False,strip_command=False)
     output += net_connect.send_command('\r', expect_string=r'sizes',
                                       strip_prompt=False,strip_command=False)
+    output += net_connect.send_command('', expect_string=r'ms',
+                                      strip_prompt=False,strip_command=False)
 
     print(output)
 except Exception as e:
