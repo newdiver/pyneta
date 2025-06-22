@@ -36,8 +36,6 @@ try:
                                        strip_prompt=False,strip_command=False)  
     output += net_connect.send_command('\r', expect_string=r'seconds',
                                        strip_prompt=False,strip_command=False)                                      
-    output += net_connect.send_command('\r', expect_string=r'address',
-                                      strip_prompt=False,strip_command=False)
     output += net_connect.send_command('\r', expect_string=r'commands',
                                       strip_prompt=False,strip_command=False)
     output += net_connect.send_command('\r', expect_string=r'sizes',
