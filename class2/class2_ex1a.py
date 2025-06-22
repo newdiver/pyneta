@@ -41,7 +41,7 @@ try:
     output += net_connect.send_command('\r', expect_string=r'sizes', delay_factor=4,
                                       strip_prompt=False,strip_command=False)
    # output += net_connect.send_command('', expect_string=r'ms',
-                                      strip_prompt=False,strip_command=False)
+#                                      strip_prompt=False,strip_command=False)
 
     print(output)
 except Exception as e:
