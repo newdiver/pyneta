@@ -28,17 +28,17 @@ print(net_connect.find_prompt())
 try:
     output = net_connect.send_command('ping', expect_string=r'ip', 
                                       strip_prompt=False,strip_command=False)
-    output += net_connect.send_command(\r, expect_string=r'address',
+    output += net_connect.send_command('\r', expect_string=r'address',
                                       strip_prompt=False,strip_command=False)
     output += net_connect.send_command('8.8.8.8', expect_string=r"'count',
                                        strip_prompt=False,strip_command=False)
-    output += net_connect.send_command(\r, expect_string=rs'econds',
+    output += net_connect.send_command('\r'', expect_string=rs'econds',
                                        strip_prompt=False,strip_command=False)                                      
-    output += net_connect.send_command(\r, expect_string=r'address',
+    output += net_connect.send_command('\r', expect_string=r'address',
                                       strip_prompt=False,strip_command=False)
-    output += net_connect.send_command(\r, expect_string=r'commands',
+    output += net_connect.send_command('\r'', expect_string=r'commands',
                                       strip_prompt=False,strip_command=False)
-    output += net_connect.send_command(\r, expect_string=r'sizes',
+    output += net_connect.send_command('\r', expect_string=r'sizes',
                                       strip_prompt=False,strip_command=False)
 
     print(output)
