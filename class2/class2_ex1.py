@@ -32,11 +32,11 @@ try:
                                       strip_prompt=False,strip_command=False)
     output += net_connect.send_command('8.8.8.8', expect_string=r'count',
                                        strip_prompt=False,strip_command=False)
-    output += net_connect.send_command('\r'', expect_string=r'seconds',
+    output += net_connect.send_command('\r', expect_string=r'seconds',
                                        strip_prompt=False,strip_command=False)                                      
     output += net_connect.send_command('\r', expect_string=r'address',
                                       strip_prompt=False,strip_command=False)
-    output += net_connect.send_command('\r'', expect_string=r'commands',
+    output += net_connect.send_command('\r', expect_string=r'commands',
                                       strip_prompt=False,strip_command=False)
     output += net_connect.send_command('\r', expect_string=r'sizes',
                                       strip_prompt=False,strip_command=False)
