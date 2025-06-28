@@ -12,7 +12,7 @@ the execution time of both of these commands. Print these execution times to sta
 from netmiko import ConnectHandler
 from getpass import getpass
 device1 ={ #(NX-OSv Switch)
-    "hostname" : 'nxos2.lasthop.io',
+    "host" : 'nxos2.lasthop.io',
    # "ssh_port" : 22,
    # nxapi_port : 8443,
     "username" : 'pyclass',
