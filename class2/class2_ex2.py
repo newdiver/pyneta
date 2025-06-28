@@ -17,12 +17,12 @@ device1 ={ #(NX-OSv Switch)
    # nxapi_port : 8443,
     "username" : 'pyclass',
     "password" : getpass(),
-    "device_type" : cisco_nxos,
+    "device_type" : 'cisco_nxos',
     "global_delay_factor" : 2,
     "fast_cli" : False,
 }
 net_connect = ConnectHandler(**device1)
-print(net_connection.find_prompt())
+print(net_connect.find_prompt())
 
 output = net_connect.send_command("show lldp neighbors detail")
 print(output)
