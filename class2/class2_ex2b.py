@@ -13,14 +13,6 @@ from netmiko import ConnectHandler
 from getpass import getpass
 from datetime import datetime
 
-#do something
-
-#Python 2: 
-
-
-#Python 3: 
-print(datetime.now() - startTime)
-
 device1 ={ #(NX-OSv Switch)
     "host" : 'nxos2.lasthop.io',
    # "ssh_port" : 22,
@@ -37,7 +29,7 @@ print(net_connect.find_prompt())
 startTime = datetime.now()
 output = net_connect.send_command("show lldp neighbors detail")
 print(output)
-print (datetime.now() - startTime )
+print (datetime.now() - startTime)
 
 startTime = datetime.now()
 
