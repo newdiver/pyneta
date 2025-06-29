@@ -29,10 +29,14 @@ print(net_connect.find_prompt())
 startTime = datetime.now()
 output = net_connect.send_command("show lldp neighbors detail")
 print(output)
+
+print(startTime)
 print (datetime.now() - startTime)
 
 startTime = datetime.now()
 
 output = net_connect.send_command("show lldp neighbors detail", delay_factor=8)
 print(output)
+print(startTime)
+
 print (datetime.now() - startTime)
