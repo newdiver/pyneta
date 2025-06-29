@@ -40,5 +40,5 @@ print(output)
 
 function_delay_time = datetime.now() - startTime
 
-print(f"The Global delay factor printed in {global_delay_time} seconds")
-print(f"The delay factor of 8 printed in {function_delay_time} seconds")
+print(f"The Global delay factor of {global_delay_factor} took {global_delay_time} seconds")
+print(f"The delay factor of {delay_factor} took {function_delay_time} seconds")
