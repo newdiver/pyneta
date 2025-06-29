@@ -24,7 +24,7 @@ device1 ={ #(NX-OSv Switch)
     "fast_cli" : False,
 }
 global_delay_factor_val = device1["global_delay_factor"]
-
+delay_factor_val = 8
 net_connect = ConnectHandler(**device1)
 print(net_connect.find_prompt())
 
@@ -36,10 +36,10 @@ global_delay_time = datetime.now() - startTime
 
 startTime = datetime.now()
 
-output = net_connect.send_command("show lldp neighbors detail", delay_factor=8)
+output = net_connect.send_command("show lldp neighbors detail", delay_factor==delay_factor_val)
 print(output)
 
 function_delay_time = datetime.now() - startTime
 
 print(f"The Global delay factor of {global_delay_factor_val} took {global_delay_time} seconds")
-print(f"The delay factor of {delay_factor} took {function_delay_time} seconds")
+print(f"The delay factor of {delay_factor_val} took {function_delay_time} seconds")
