@@ -30,13 +30,15 @@ startTime = datetime.now()
 output = net_connect.send_command("show lldp neighbors detail")
 print(output)
 
-print(startTime)
-print (datetime.now() - startTime)
+
+global_delay_time = datetime.now() - startTime
 
 startTime = datetime.now()
 
 output = net_connect.send_command("show lldp neighbors detail", delay_factor=8)
 print(output)
-print(startTime)
 
-print (datetime.now() - startTime)
+function_delay_time = datetime.now() - startTime
+
+print(f"The Global delay factor printed in {global_delay_time} seconds")
+print(f"The delay factor of 8 printed in {function_delay_time} seconds")
