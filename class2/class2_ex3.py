@@ -18,6 +18,7 @@ net_connect = ConnectHandler(**cisco4)
 print(net_connect.find_prompt())
 try:
     output = net_connect.send_command('show version',use_textfsm=True)
+    output += net_connect.send_command('show lldp neighbors',use_textfsm=True)
 
     print(output)
 except Exception as e:
