@@ -34,7 +34,7 @@ commands = [
     "exit",
 ]
 net_connect = ConnectHandler(**cisco3)
-with net_connect
+with net_connect :
     print(net_connect.find_prompt())
     try:
         startTime = datetime.now()
