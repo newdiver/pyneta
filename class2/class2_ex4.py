@@ -38,9 +38,9 @@ with net_connect :
     print(net_connect.find_prompt())
     try:
         startTime = datetime.now()
-        output = net_connect.send_config_set(command)
+        output = net_connect.send_config_set(commands)
         
-        net_connect.disconnect()
+    #    net_connect.disconnect()
 
         print(output)
     except Exception as e:
