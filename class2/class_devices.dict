@@ -1,66 +1,75 @@
 devices {
 "cisco3 { #(Cisco IOS-XE)
-    hostname" = 'cisco3.lasthop.io',
-    "snmp_port" = 161,
-    "ssh_port" = 22,
-    "username" = 'pyclass',
-    "password" = getpass(),
+    host" : 'cisco3.lasthop.io',
+    "snmp_port" : 161,
+    "ssh_port" : 22,
+    "username" : 'pyclass',
+    "password" : getpass(),
     "device_type" : 'cisco_ios',
     }
 cisco4 { #(Cisco IOS-XE)
-    "hostname" = 'cisco4.lasthop.io',
-    "snmp_port" = 161,
-    "ssh_port" = 22,
-    "username" = 'pyclass',
-    "password" = 88newclass,
+    "host" : 'cisco4.lasthop.io',
+    "snmp_port" : 161,
+    "ssh_port" : 22,
+    "username" : 'pyclass',
+    "password" : 88newclass,
+     "device_type" : 'cisco_ios',
     }
 arista1 { #(Arista vEOS switch)
-    "hostname" = 'arista1.lasthop.io',
-    "ssh_port" = 22,
-    eapi_port = 443,
-    "username" =' pyclass',
-    "password" = 88newclass,
+    "host" : 'arista1.lasthop.io',
+    "ssh_port" : 22,
+    eapi_port : 443,
+    "username" :' pyclass',
+    "password" : 88newclass,
+     "device_type" : 'unknown',
     }
 arista2{ # (Arista vEOS switch) 
-    "hostname" = 'arista2.lasthop.io',
-    "ssh_port" = 22,
-    eapi_port = 443,
-    "username" = 'pyclass',
-    "password" = 88newclass,
+    "host" : 'arista2.lasthop.io',
+    "ssh_port" : 22,
+    eapi_port : 443,
+    "username" : 'pyclass',
+    "password" : 88newclass,
+         "device_type" : 'unknown',
+
     }
 arista3{  #(Arista vEOS switch) 
-    "hostname" = 'arista3.lasthop.io',
-    "ssh_port" = 22,
-    eapi_port = 443,
-    "username" = 'pyclass,'
-    "password" = 88newclass,
+    "host" : 'arista3.lasthop.io',
+    "ssh_port" : 22,
+    eapi_port : 443,
+    "username" : 'pyclass,'
+    "password" : 88newclass,
+     "device_type" : 'unknown',
     }
 arista4 { #(Arista vEOS switch)
-    "hostname" = 'arista4.lasthop.io',
-    "ssh_port" = 22,
-    eapi_port = 443,
-    "username" = 'pyclass',
-    "password" = 88newclass,
+    "host" : 'arista4.lasthop.io',
+    "ssh_port" : 22,
+    eapi_port : 443,
+    "username" : 'pyclass',
+    "password" : 88newclass,
+     "device_type" : 'unknown',
     }
 srx2 { #(Juniper SRX)
-    "hostname" = 'srx2.lasthop.io',
-    "ssh_port" = 22,
-    netconf_port = 830,
-    "username" = 'pyclass',
-    "password" = 88newclass,
+    "host" : 'srx2.lasthop.io',
+    "ssh_port" : 22,
+    netconf_port : 830,
+    "username" : 'pyclass',
+    "password" : 88newclass,
+     "device_type" : 'unknown',
     }
 nxos1 { #(NX-OSv Switch)
-    "hostname" = 'nxos1.lasthop.io',
-    "ssh_port" = 22,
-    nxapi_port = 8443,
-    "username" = 'pyclass',
-    "password" = 88newclass,
+    "host" : 'nxos1.lasthop.io',
+    "ssh_port" : 22,
+    nxapi_port : 8443,
+    "username" : 'pyclass',
+    "password" : 88newclass,
+     "device_type" : 'unknown',
     }
 nxos2 { #(NX-OSv Switch)
-    "hostname" = 'nxos2.lasthop.io',
-    "ssh_port" = 22,
-    nxapi_port = 8443,
-    ""username"" = 'pyclass',
-    "password" = 88newclass,
+    "host" : 'nxos2.lasthop.io',
+    "ssh_port" : 22,
+    nxapi_port : 8443,
+    ""username"" : 'pyclass',
+    "password" : 88newclass,
+     "device_type" : 'unknown',
     }
 }
