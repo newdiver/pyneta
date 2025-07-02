@@ -1,0 +1,14 @@
+vlan 5
+name data
+exit
+vlan 10
+name Servers
+exit
+vlan 20
+name vwmare
+exit
+vlan 25
+name dmz
+end
+
+

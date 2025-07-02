@@ -33,12 +33,12 @@ commands = [
     "ip domain-lookup",
     "exit",
 ]
-net_connect = ConnectHandler(**cisco3)
+net_connect = ConnectHandler(**cisco3, fast_cli = False)
 with net_connect :
     print(net_connect.find_prompt())
     try:
         startTime = datetime.now()
-        output = net_connect.send_config_set(commands, fast_cli = False)
+        output = net_connect.send_config_set(command)
         
         net_connect.disconnect()
 
