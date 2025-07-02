@@ -21,7 +21,7 @@ Verify DNS lookups on the router are now working by executing 'ping google.com'.
 '''
 
 cisco3 { #(Cisco IOS-XE)
-    "host" :'cisco3.lasthop.io',
+    "host" : 'cisco3.lasthop.io',
     "username" : 'pyclass',
     "password" : getpass(),
     "device_type": 'cisco_ios'
