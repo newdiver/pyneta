@@ -38,6 +38,7 @@ with net_connect :
     print(net_connect.find_prompt())
     try:
         startTime = datetime.now()
+        print(startTime)
         output = net_connect.send_config_set(commands)
         output += net_connect.send_command("ping google.com")
         print(output)
@@ -49,4 +50,4 @@ with net_connect :
     except Exception as e:
         print(f"An error occurred: {e}")
 
-        net_connect.disconnect()
+net_connect.disconnect()
