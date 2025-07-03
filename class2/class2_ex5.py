@@ -10,14 +10,14 @@ Use Netmiko's send_config_from_file() method to accomplish this.
 Also use Netmiko's save_config() method to save the changes to the startup-config.
 '''
 devices = {
-nxos1 = { #(NX-OSv Switch)
+nxos1 = { 
     "host" : 'nxos1.lasthop.io',
     "ssh_port" : 22,
     "username" : 'pyclass',
     "password" : getpass(),
      "device_type" : 'cisco_nxos',
     }
-nxos2 = { #(NX-OSv Switch)
+nxos2 = { 
     "host" : 'nxos2.lasthop.io',
     "ssh_port" : 22,
     ""username"" : 'pyclass',
