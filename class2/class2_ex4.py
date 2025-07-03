@@ -40,7 +40,7 @@ with net_connect :
         startTime = datetime.now()
         output = net_connect.send_config_set(commands)
         output += net_connect.send_command("ping google.com")
-        endTime = StartTime - datetime.now()
+        endTime = startTime - datetime.now()
         print(endTime)
         print(output)
         
