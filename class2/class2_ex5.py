@@ -9,7 +9,7 @@ VLANs including VLAN names (just pick 5 VLAN numbers between 100 - 999).
 Use Netmiko's send_config_from_file() method to accomplish this. 
 Also use Netmiko's save_config() method to save the changes to the startup-config.
 '''
-devices = {
+devices = [
 nxos1 = { 
     "host" : 'nxos1.lasthop.io',
     "ssh_port" : 22,
@@ -24,7 +24,7 @@ nxos2 = {
     "password" : getpass(),
      "device_type" : 'cisco_nxos',
     }
-}
+]
 for device in devices:
     net_connect = ConnectHandler(**device, fast_cli = False)
     with net_connect :
