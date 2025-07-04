@@ -38,6 +38,7 @@ for device in (nxos1,nxos2):
             print(endTime)
     #       net_connect.disconnect()
             print(output)
+            net_connect.save_config()
         except Exception as e:
             print(f"An error occurred: {e}")
 
