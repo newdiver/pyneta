@@ -3,6 +3,7 @@
 import os
 from netmiko import ConnectHandler
 from getpass import getpass
+from datetime import datetime
 
 '''5. On both the NXOS1 and NXOS2 switches configure five 
 VLANs including VLAN names (just pick 5 VLAN numbers between 100 - 999).
