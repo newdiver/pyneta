@@ -32,7 +32,7 @@ for device in (nxos1,nxos2):
         try:
             startTime = datetime.now()
             print(startTime)
-            output = net_connect.send_config_from_file(class2/commands.txt)
+            output = net_connect.send_config_from_file(./class2/commands.txt)
    #        print(output)
             endTime = datetime.now() - startTime
             print(endTime)
