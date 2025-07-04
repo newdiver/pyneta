@@ -19,7 +19,7 @@ nxos1 = {
 nxos2 = { 
     "host" : 'nxos2.lasthop.io',
     "ssh_port" : 22,
-    ""username"" : 'pyclass',
+    "username": 'pyclass',
     "password" : getpass(),
      "device_type" : 'cisco_nxos',
     }
