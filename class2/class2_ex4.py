@@ -41,11 +41,10 @@ with net_connect :
         print(startTime)
         output = net_connect.send_config_set(commands)
         output += net_connect.send_command("ping google.com")
-        print(output)
+   #     print(output)
         endTime = datetime.now() - startTime
         print(endTime)
     #    net_connect.disconnect()
-
         print(output)
     except Exception as e:
         print(f"An error occurred: {e}")
