@@ -74,6 +74,16 @@ with net_connect :
     # step C.
         print(output)
     #    net_connect.save_config()
+    # step D.
+     net_connect.write_channel('disable\n')
+    time.sleep(21) # Allow some time for the device to process
+    output = net_connect.read_channel()
+    print(output)
+    # step 7
+    net_connect.write_channel('enable\n')  # Ctrl+A
+    time.sleep(1)
+    output = net_connect.read_channel()
+    print(output)
     except Exception as e:
         print(f"An error occurred: {e}")
 
