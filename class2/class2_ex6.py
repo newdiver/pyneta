@@ -51,7 +51,7 @@ device = {
     "password" : getpass(),
     "secret" : getpass(),
      "device_type" : 'cisco_ios',
-     "session_log" : "my_output.txt"
+     "session_log" : 'my_output.txt',
     }
 
 
