@@ -83,9 +83,9 @@ with net_connect :
         net_connect.write_channel('enable\n')  # Ctrl+A
         time.sleep(1)
         output = net_connect.read_channel()
-        print(output)
-        output = net_connect.write_channel(secret)
-        output = net_connect.write_channel('\n')
+        print(net_connect.find_prompt())
+        output = net_connect.enable()
+        print(net_connect.find_prompt())
         print(output)
     except Exception as e:
         print(f"An error occurred: {e}")
