@@ -84,7 +84,9 @@ with net_connect :
         time.sleep(1)
         output = net_connect.read_channel()
         print(output)
-        output = net_connect.write_channel(secret'\n')
+        output = net_connect.write_channel(secret)
+        output = net_connect.write_channel('\n')
+    print(output)
     except Exception as e:
         print(f"An error occurred: {e}")
 
