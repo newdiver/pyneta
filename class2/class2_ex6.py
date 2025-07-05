@@ -3,8 +3,8 @@
 import os
 from netmiko import ConnectHandler
 from getpass import getpass
-from datetime import datetime
-from time import sleep
+from datetime import datetime 
+import time
 
 '''6. Using SSH and netmiko connect to the Cisco4 router. 
 In your device definition, specify both an 'secret' and a 
