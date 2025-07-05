@@ -86,7 +86,7 @@ with net_connect :
         print(output)
         output = net_connect.write_channel(secret)
         output = net_connect.write_channel('\n')
-    print(output)
+        print(output)
     except Exception as e:
         print(f"An error occurred: {e}")
 
