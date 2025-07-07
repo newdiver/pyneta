@@ -28,7 +28,7 @@ Internet  10.220.88.38 161  0002.00ff.0001  ARPA  Gi0/0/0
 
 arp_processed_list = []
 
-for arp_entry in arp_list:
+for arp_entry in arp_data:
     if re.search(r"Protocol.*Interface", arp_entry):
         continue
         _, ip_addr, _, mac_addr, _, intf= arp_entry.split()
