@@ -35,6 +35,6 @@ for arp_entry in arp_data:
         arp_dict = {"mac_addr": mac_addr, "ip_addr": ip_addr, "interface": intf}
         arp_processed_list.append(arp_dict)
     
-print('*, x 80')
-pprint(arp_processed_list)
-print('* x 80')
+    print("*" x 80)
+    pprint(arp_processed_list)
+    print("*" x 80)
