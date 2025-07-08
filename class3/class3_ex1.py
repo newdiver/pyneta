@@ -26,15 +26,21 @@ Internet  10.220.88.37 104  0001.00ff.0001  ARPA  Gi0/0/0
 Internet  10.220.88.38 161  0002.00ff.0001  ARPA  Gi0/0/0
 """
 
+
+
 arp_processed_list = []
 
-for arp_entry in arp_data:
+arp_data = arp_data.strip()
+arp_list = arp_data.splitlines()
+
+for arp_entry in arp_list:
     if re.search(r"Protocol.*Interface", arp_entry):
         continue
-        _, ip_addr, _, mac_addr, _, intf= arp_entry.split()
-        arp_dict = {"mac_addr": mac_addr, "ip_addr": ip_addr, "interface": intf}
-        arp_processed_list.append(arp_dict)
+    _, ip_addr, _, mac_addr, _, intf= arp_entry.split()
+    arp_dict = {"mac_addr": mac_addr, "ip_addr": ip_addr, "interface": intf}
+    arp_processed_list.append(arp_dict)
     
-    print("*" * 80)
+    
+  #  print("*" * 80)
     pprint(arp_processed_list)
-    print("*" * 80)
+    # print("*" * 80)
