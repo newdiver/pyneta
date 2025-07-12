@@ -9,7 +9,7 @@ and password. Use a fictional username/password to avoid checking
 the lab password into GitHub.
 '''
 
-import yaml
+import yaml # type: ignore
 from pprint import pprint
 
 cisco3 = {"device_name" : "cisco3", "host": "cisco3.lasthop.io"}
@@ -21,8 +21,8 @@ my_devices= [cisco3,cisco4,arista1,arista2]
 
 for device in my_devices:
    
-    device[username] = "myadmin",
-    device[password] = "sneakyword"
+    device["username"] = "myadmin",
+    device["password"] = "sneakyword"
     
     pprint(device)
     
