@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-import yaml 
 
 '''
  In your lab environment, there is a file located at ~/.netmiko.yml.
@@ -13,9 +12,15 @@ pairs designed to work directly with Netmiko. The .netmiko.yml also
 contains group definitions for: cisco, arista, juniper, and nxos groups.
 These group definitions are lists of devices. Once again, don't check the .netmiko.yml into GitHub'''
 
-filename = "../.netmiko.yml"
+import yaml 
+from os import path
+from netmiko import ConnectHandler
 
-with open(filename, "w") as file:
-    netdevices = yaml.safe_load(file, default_flow_style=False, sort_keys=False)
+
+home_dir = path.expanduser("~")
+filename = path.join(home_dir, ".netmiko.yml")
+
+with open(filename, "r") as file:
+    netdevices = yaml.safe_load(file)
 print(netdevices)
 
