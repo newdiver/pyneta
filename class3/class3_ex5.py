@@ -13,6 +13,6 @@ These group definitions are lists of devices. Once again, don't check the .netmi
 filename = "~/.netmiko.yml"
 
 with open("filename", "w") as file:
-    yaml.safe_load(, file, default_flow_style=False, sort_keys=False)
-   
+    netdevices = yaml.safe_load(file, default_flow_style=False, sort_keys=False)
+   print(netdevices)
 
