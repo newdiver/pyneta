@@ -10,9 +10,9 @@ pairs designed to work directly with Netmiko. The .netmiko.yml also
 contains group definitions for: cisco, arista, juniper, and nxos groups.
 These group definitions are lists of devices. Once again, don't check the .netmiko.yml into GitHub'''
 
-filename = "~/.netmiko.yml"
+filename = "../.netmiko.yml"
 
-with open("filename", "w") as file:
+with open(filename, "w") as file:
     netdevices = yaml.safe_load(file, default_flow_style=False, sort_keys=False)
 print(netdevices)
 
