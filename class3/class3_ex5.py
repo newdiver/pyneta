@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+
+import yaml 
+
 '''
  In your lab environment, there is a file located at ~/.netmiko.yml.
  This file contains all of the devices used in the lab. Create a Python 
