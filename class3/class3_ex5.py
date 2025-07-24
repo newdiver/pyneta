@@ -22,5 +22,11 @@ filename = path.join(home_dir, ".netmiko.yml")
 
 with open(filename, "r") as file:
     netdevices = yaml.safe_load(file)
-print(netdevices)
+
+cisco3 = netdevices["cisco3"]
+net_connect = ConnectHandler(**cisco3)
+
+print()
+print(net_connect.find_prompt())
+print()
 
