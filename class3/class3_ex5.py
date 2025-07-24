@@ -14,5 +14,5 @@ filename = "~/.netmiko.yml"
 
 with open("filename", "w") as file:
     netdevices = yaml.safe_load(file, default_flow_style=False, sort_keys=False)
-   print(netdevices)
+print(netdevices)
 
