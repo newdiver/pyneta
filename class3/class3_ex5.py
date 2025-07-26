@@ -23,7 +23,7 @@ filename = path.join(home_dir, ".netmiko.yml")
 with open(filename, "r") as file:
     netdevices = yaml.safe_load(file)
 
-cisco3 = netdevices["cisco3"]
+cisco3 = netdevices["cisco4"]
 net_connect = ConnectHandler(**cisco3)
 
 print()
