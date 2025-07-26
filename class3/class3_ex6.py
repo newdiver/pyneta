@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python
 '''
 6. Use Netmiko to retrieve 'show run' from the Cisco4 device. Feed this configuration into CiscoConfParse.
 
@@ -28,7 +28,8 @@ with open(filename, "r") as file:
 
 cisco4 = netdevices["cisco4"]
 net_connect = ConnectHandler(**cisco4)
-
+print(net_connect.find_prompt())
+break 
 switch_output = net_connect.send_command('show run')
 dir(switch_output)
 
