@@ -31,9 +31,10 @@ with open(filename, "r") as file:
     with net_connect:
         try:
             print(net_connect.find_prompt())
-        else:
             switch_output = net_connect.send_command('show run')
             dir(switch_output)
+        except Exception as e:
+              print(f"An error occurred: {e}")
 
 '''
 parse = CiscoConfParse(switch_output, syntax='ios')
