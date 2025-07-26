@@ -26,13 +26,14 @@ filename = path.join(home_dir, ".netmiko.yml")
 with open(filename, "r") as file:
     netdevices = yaml.safe_load(file)
 
-cisco4 = netdevices["cisco4"]
-net_connect = ConnectHandler(**cisco4)
-print(net_connect.find_prompt())
-break 
-switch_output = net_connect.send_command('show run')
-dir(switch_output)
-
+    cisco4 = netdevices["cisco4"]
+    net_connect = ConnectHandler(**cisco4)
+    with net_connect:
+        try:
+            print(net_connect.find_prompt())
+        else:
+            switch_output = net_connect.send_command('show run')
+            dir(switch_output)
 
 '''
 parse = CiscoConfParse(switch_output, syntax='ios')
