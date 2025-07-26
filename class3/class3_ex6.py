@@ -20,21 +20,22 @@ from os import path
 from netmiko import ConnectHandler
 from ciscoconfparse import CiscoConfParse
 
-home_dir = path.expanduser("~")
-filename = path.join(home_dir, ".netmiko.yml")
+if __name__ == "__main__":
+    home_dir = path.expanduser("~")
+    filename = path.join(home_dir, ".netmiko.yml")
 
-with open(filename, "r") as file:
-    netdevices = yaml.safe_load(file)
+    with open(filename, "r") as file:
+        netdevices = yaml.safe_load(file)
 
-    cisco4 = netdevices["cisco4"]
-    net_connect = ConnectHandler(**cisco4)
-    with net_connect:
-        try:
-            print(net_connect.find_prompt())
-            switch_output = net_connect.send_command('show run')
-            dir(switch_output)
-        except Exception as e:
-              print(f"An error occurred: {e}")
+        cisco4 = netdevices["cisco4"]
+        net_connect = ConnectHandler(**cisco4)
+        with net_connect:
+            try:
+                print(net_connect.find_prompt())
+                switch_output = net_connect.send_command('show run')
+                dir(switch_output)
+            except Exception as e:
+                print(f"An error occurred: {e}")
 
 '''
 parse = CiscoConfParse(switch_output, syntax='ios')
