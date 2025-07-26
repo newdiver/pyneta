@@ -18,7 +18,7 @@ CiscoConfParse(config.splitlines(), ignore_blank_lines=False)
 import yaml 
 from os import path
 from netmiko import ConnectHandler
-
+from ciscoconfparse import CiscoConfParse
 
 home_dir = path.expanduser("~")
 filename = path.join(home_dir, ".netmiko.yml")
@@ -30,9 +30,11 @@ cisco4 = netdevices["cisco4"]
 net_connect = ConnectHandler(**cisco4)
 
 switch_output = net_connect.send_command('show run')
-from ciscoconfparse import CiscoConfParse
+dir(switch_output)
 
-parse = CiscoConfParse('switch_output', syntax='ios')
+
+'''
+parse = CiscoConfParse(switch_output, syntax='ios')
 
 for intf_obj in parse.find_parent_objects('^interface', '^\s+ip address'):
-    print("ip address: " + intf_obj.text)
+    print("ip address: " + intf_obj.text)'''
