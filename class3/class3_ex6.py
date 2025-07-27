@@ -38,6 +38,7 @@ if __name__ == "__main__":
             interfaces = parse.find_objects_w_child(
             parentspec=r"^interface", childspec=r"^\s+ip address"
             )
-            print(parentspec)
+            print(interfaces)
+            #for intf in interfaces:
         except Exception as e:
             print(f"An error occurred: {e}")
