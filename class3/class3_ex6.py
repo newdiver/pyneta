@@ -32,7 +32,7 @@ if __name__ == "__main__":
     with net_connect:
         try:
             print(net_connect.find_prompt()) # Troubleshooting see if i can get the command prompt
-            switch_output = net_connect.send_command('show run')
+            switch_output = net_connect.send_command("show run")
             dir(switch_output)
             parse = CiscoConfParse(show_run.splitlines(), ignore_blank_lines=False)
             interfaces = cisco_cfg.find_objects_w_child(
