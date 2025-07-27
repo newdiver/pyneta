@@ -44,7 +44,7 @@ if __name__ == "__main__":
                 ip_address = intf.re_search_children(r"ip address")[0].text
                 print("IP Address Line: {}".format(ip_address))
                 print()
-             print()
+            print()
 
         except Exception as e:
             print(f"An error occurred: {e}")
