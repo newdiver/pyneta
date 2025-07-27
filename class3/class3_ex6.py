@@ -34,8 +34,8 @@ if __name__ == "__main__":
             print(net_connect.find_prompt()) # Troubleshooting see if i can get the command prompt
             switch_output = net_connect.send_command("show run")
             dir(switch_output)
-            parse = CiscoConfParse(show_run.splitlines(), ignore_blank_lines=False)
-            interfaces = cisco_cfg.find_objects_w_child(
+            parse = CiscoConfParse(switch_output.splitlines(), ignore_blank_lines=False)
+            interfaces = parse.find_objects_w_child(
             parentspec=r"^interface", childspec=r"^\s+ip address"
             )
         except Exception as e:
