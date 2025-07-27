@@ -39,6 +39,12 @@ if __name__ == "__main__":
             parentspec=r"^interface", childspec=r"^\s+ip address"
             )
             print(interfaces)
-            #for intf in interfaces:
+            for intf in interfaces:
+                print(" Interface line: {}".format(intf.text))
+                ip_address = intf.re_search_children(r"ip address")[0].text
+                print("IP Address Line: {}".format(ip_address))
+                print()
+             print()
+
         except Exception as e:
             print(f"An error occurred: {e}")
