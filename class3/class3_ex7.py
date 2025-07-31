@@ -33,7 +33,7 @@ bgp_data = """ router bgp 44
 """
 peers_bgp = []
 
-bgp_obj = CiscoConfParse(bgp_config.splitlines(), ignore_blank_lines=False)
+bgp_obj = CiscoConfParse(bgp_data.splitlines(), ignore_blank_lines=False)
 
 neighbor = bgp_obj.find_objects(r"^neighbor")
 
