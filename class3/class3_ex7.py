@@ -13,7 +13,8 @@ Your output should look similar to the following. Use ciscoconfparse to accompli
 from ciscoconfparse import CiscoConfParse
 from pprint import pprint
 
-bgp_data = """ router bgp 44
+bgp_data = """ 
+router bgp 44
  bgp router-id 10.220.88.38
  address-family ipv4 unicast
  !
