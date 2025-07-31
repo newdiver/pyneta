@@ -37,11 +37,11 @@ peers_bgp = []
 bgp_obj = CiscoConfParse(bgp_data.splitlines(), ignore_blank_lines=False)
 
  
-neighbor_list = bgp_obj.find_objects_w_parents( 
+neighbor_list = bgp_obj.find_objects_w_parents(
     parentspec=r"router bgp", childspec=r"neighbor"
-)    
+)
 for neighbor in neighbor_list:
-    _, neighbor_ip = neighbor_list.text.split()    
+    _, neighbor_ip = neighbor_list.text.split()    #_, neighbor_ip = neighbor_list.text.split()    
     for child in neighbor_list.children:
         if "remote-as" in child.text:
             _, remote_as = child.text.split()
