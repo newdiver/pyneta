@@ -36,6 +36,8 @@ peers_bgp = []
 
 bgp_obj = CiscoConfParse(bgp_data.splitlines(), ignore_blank_lines=False)
 
+print(bgp_obj)
+dir(bgp_obj)
  
 neighbor_list = bgp_obj.find_objects_w_parents(
     parentspec=r"router bgp", childspec=r"neighbor"
