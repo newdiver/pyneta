@@ -11,7 +11,7 @@ Your output should look similar to the following. Use ciscoconfparse to accompli
 
 '''
 from ciscoconfparse import CiscoConfParse
-
+from pprint import pprint
 
 bgp_data = """ router bgp 44
  bgp router-id 10.220.88.38
@@ -31,11 +31,11 @@ bgp_data = """ router bgp 44
    route-policy ALLOW in
    route-policy ALLOW out
 """
-
+peers_bgp = []
 
 bgp_obj = CiscoConfParse(bgp_data.splitlines())
 
-peers_bgp = []
+
 
 neighbor = bgp_obj.find_objects(r"^neighbor")
 
@@ -43,17 +43,19 @@ neighbor = bgp_obj.find_objects(r"^neighbor")
 print(type(neighbor))
 print(dir(neighbor))
 '''
+'''
 for neighbor in neighbor_list:
     print(neighbor)
+ '''   
 neighbor_list = bgp_obj.find_objects_w_parents( 
-   parentspec=r"router bgp", childspec=r"neighbor"
-)
+    parentspec=r"router bgp", childspec=r"neighbor"
+   )    
 for neighbor in neighbor_list:
-   _, neighbor_ip = neighbor_list.text.split()
+   _, neighbor_ip = neighbor_list.text.split()    
    for child in neighbor_list.children:
-      if "remote-as" in child.text:
-         _, remote_as = child.text.split()
-         print(remote_as)
+       if "remote-as" in child.text:
+       _, remote_as = child.text.split()
+           print(remote_as)
    peers_bgp.append(neighbor_ip, remote_as)
        
    print()
