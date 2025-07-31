@@ -33,9 +33,7 @@ bgp_data = """ router bgp 44
 """
 peers_bgp = []
 
-bgp_obj = CiscoConfParse(bgp_data.splitlines())
-
-
+bgp_obj = CiscoConfParse(bgp_config.splitlines(), ignore_blank_lines=False)
 
 neighbor = bgp_obj.find_objects(r"^neighbor")
 
@@ -72,7 +70,7 @@ for neighbor in neighbors:
     for child in neighbor.children:
         if "remote-as" in child.text:
             _, remote_as = child.text.split()
-    bgp_peers.append(neighbor_ip, remote_as)
+    peers_bgp.append(neighbor_ip, remote_as)
 
 print()
 print("BGP Peers: ")
