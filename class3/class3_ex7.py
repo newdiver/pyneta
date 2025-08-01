@@ -47,7 +47,7 @@ for neighbor in neighbor_list:
     for child in neighbor_list.children:
         if "remote-as" in child.text:
             _, remote_as = child.text.split()
-            print(remote_as)
+           # print(remote_as)
     peers_bgp.append(neighbor_ip, remote_as)
        
 print()
