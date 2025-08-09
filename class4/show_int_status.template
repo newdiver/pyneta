@@ -1,10 +1,12 @@
-Value PORT (\S+)
+Value PORT_NAME (\S+)
 
 Start
+  ^${PORT_NAME}\s+ -> Record
+
 #  ^Port.*Type\s*$$ -> ShowPortName
 
 # ShowPortName
-  ^${PORT}\s+ -> Record
+
 
 EOF
 
