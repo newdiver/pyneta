@@ -1,7 +1,9 @@
 Value PORT (\S+)
 
 Start
-  ^${PORT}\S+ -> Record
+  ^${PORT}
+
+  ^${PORT}\s+ -> Record
 
 EOF
 
