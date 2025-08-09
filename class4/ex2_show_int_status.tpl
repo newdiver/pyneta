@@ -6,7 +6,10 @@ Value SPEED (\S+)
 Value PORT_TYPE (\S+)
 
 Start
-  ^${PORT_NAME}\s+${STATUS}\s+{VLAN}\s+{SPEED}\s+{PORT_TYPE}$$ -> Record
+  ^Port.*Type\s*$$ - ShowPortName
+
+ShowPortName
+  ^${PORT_NAME}\s+${STATUS}\s+${VLAN}\s+${SPEED}\s+${PORT_TYPE}$$ -> Record
 
 EOF
 
