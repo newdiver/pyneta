@@ -1,9 +1,9 @@
 Value PORT (\S+)
 
 Start
-  ^Port.*Type\s*$$ -> ShowPortName
+#  ^Port.*Type\s*$$ -> ShowPortName
 
-ShowPortName
+# ShowPortName
   ^${PORT}\s+ -> Record
 
 EOF
