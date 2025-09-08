@@ -39,14 +39,14 @@ nxos1 = {
   "interface": "ethernet1/1",
   "ipv4_address":"10.1.100.1",
   "local_as" : "22",
-  "ipv4_mask" : "24"
+  "ipv4_netmask" : "24"
 }
 nxos2 = {
   "device_name": "nxos2",
   "interface": "ethernet1/1",
   "ipv4_address": "10.1.100.2",
   "local_as" : "22",
-  "ipv4_mask": "24"
+  "ipv4_netmask": "24"
 }  
  
 '''for j2_vars in (nxos1, nxos2):
