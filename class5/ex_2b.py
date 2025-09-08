@@ -29,7 +29,7 @@ from jinja2.environment import Environment
 from pprint import pprint
 
 env = Environment(undefined=StrictUndefined)
-env.loader = FileSystemLoader("./templates/")
+env.loader = FileSystemLoader("./templates/exercise2")
 
 filename = "ex2b_nxos.j2"
 #with open(filename) as f:
