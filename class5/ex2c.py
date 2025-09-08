@@ -46,8 +46,8 @@ if __name__ =="__main__":
         "ipv4_netmask": "24",
     }
     
-    nxos1_vars["peer_ip"] = nxos2_vars["ipv4_address"]
-    nxos2_vars["peer_ip"] = nxos1_vars["ipv4_address"]
+    nxos1_vars["peer_ip_addr"] = nxos2_vars["ipv4_address"]
+    nxos2_vars["peer_ip_addr"] = nxos1_vars["ipv4_address"]
     
     # add jinja2 vars to be included in the Netmiko device dictionary
     nxos1["j2_vars"] = nxos1_vars
@@ -86,10 +86,10 @@ if __name__ =="__main__":
     print(">>> Testing ping and BGP")
     for device in (nxos1,):
         net_connect = device["ssh_conn"]
-        remote_ip = device["j2_vars"]["peer_ip"]
+        remote_ip = device["j2_vars"]["peer_ip_addr"]
         
         # Test Ping
-        output = net_connect.send_command(f"ping {reporte_ip}")
+        output = net_connect.send_command(f"ping {remote_ip}")
         print(output)
         if "64 bytes from" not in output:
             print("\nPing failed!!!")
